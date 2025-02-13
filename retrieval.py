@@ -54,19 +54,19 @@ class ExperimentConfig:
         self.counselor_params = {
             "model": "deepseek-chat",
             "openai_api_base": "https://api.deepseek.com",  # 改为openai_api_base
-            "openai_api_key": "sk-b903cbc42ff549e8a4849c2ce8d9d5b9",  # 改为openai_api_key
+            "openai_api_key": "",  # 改为openai_api_key
         }
 
         # 修改后的来访者参数
         self.client_params = {
             "model": "moonshot-v1-128k",
             "openai_api_base": "https://api.moonshot.cn/v1",
-            "openai_api_key": "sk-cqxUL0HSqcH8MHFddrdHLbSiHylLF3mEcdCJaegQVIW1nVY5"
+            "openai_api_key": ""
         }
 
         # 本地嵌入模型配置（与VectorDBGenerator一致）
         self.embedding_params = {
-            "model_name": "shibing624/text2vec-base-chinese",  # 这里使用您本地已经下载好的模型
+            "model_name": "shibing624/text2vec-base-chinese",  
             "model_kwargs": {'device': 'cuda' if torch.cuda.is_available() else 'cpu'},
             "encode_kwargs": {
                 'batch_size': 32,
